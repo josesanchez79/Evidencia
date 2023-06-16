@@ -15,6 +15,9 @@ public class Cita {
         this.paciente = paciente;
     }
 
+    public Cita() {
+    }
+
     public String getId() {
         return id;
     }
@@ -61,5 +64,15 @@ public class Cita {
 
     public void setPaciente(Paciente paciente) {
         this.paciente = paciente;
+    }
+    public String toCSVString() {
+        StringBuilder csvBuilder = new StringBuilder();
+        csvBuilder.append(id).append(",")
+                .append(dia).append(",")
+                .append(hora).append(",")
+                .append(motivo).append(",")
+                .append(doctor.getId()).append(",")
+                .append(paciente.getId());
+        return csvBuilder.toString();
     }
 }

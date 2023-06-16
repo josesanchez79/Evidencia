@@ -2,19 +2,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Clinica clinica = new Clinica();
+        clinica.cargaInfo();
         Scanner lector = new Scanner(System.in);
 
-        // Agregar algunos doctores y pacientes de ejemplo
-        Doctor doctor1 = new Doctor("D001", "John Doe", "Pediatrics");
-        Doctor doctor2 = new Doctor("D002", "Jane Smith", "Dermatology");
-        clinica.agregarDoctor(doctor1);
-        clinica.agregarDoctor(doctor2);
-
-        Paciente paciente1 = new Paciente("P001", "Alice Johnson");
-        Paciente paciente2 = new Paciente("P002", "Bob Williams");
-
-        clinica.agregarPaciente(paciente1);
-        clinica.agregarPaciente(paciente2);
+        String admin1 = "admin";
+        String contraseña1 = "contraseña";
+        clinica.agregarAdmin(admin1, contraseña1);
 
         boolean sesion = false;
 
@@ -35,7 +28,7 @@ public class Main {
         int opc = 0;
 
         while (opc != 5) {
-            System.out.println("---- Admin Menu ----");
+            System.out.println("Menu");
             System.out.println("1. Agregar doctor");
             System.out.println("2. Agregar paciente");
             System.out.println("3. Crear cita");
@@ -57,6 +50,7 @@ public class Main {
 
                     Doctor nuevoDoctor = new Doctor(doctorId, doctorNombre, doctorEspec);
                     clinica.agregarDoctor(nuevoDoctor);
+                    clinica.guardarInfo();
                     break;
 
                 case 2:
@@ -67,6 +61,7 @@ public class Main {
 
                     Paciente nuevoPaciente = new Paciente(pacienteId, pacienteNombre);
                     clinica.agregarPaciente(nuevoPaciente);
+                    clinica.guardarInfo();
                     break;
 
                 case 3:
@@ -90,7 +85,7 @@ public class Main {
                     for (Paciente paciente : clinica.getPacientes()) {
                         System.out.println(paciente.getId() + " - " + paciente.getNombre());
                     }
-                    System.out.print("Select Patient ID: ");
+                    System.out.print("Selecciona el ID de un paciente: ");
                     String selecPacienteId = lector.nextLine();
 
                     Doctor selecDoctor = clinica.buscarDoctor(selecDoctorId);
@@ -99,6 +94,7 @@ public class Main {
                     if (selecDoctor != null && selecPaciente != null) {
                         Cita nuevaCita = new Cita(citaId, dia, hora, motivo, selecDoctor, selecPaciente);
                         clinica.crearCita(nuevaCita);
+                        clinica.guardarInfo();
                     } else {
                         System.out.println("ID de paciente o doctor invalido, por favor intenta de nuevo.");
                     }
@@ -113,14 +109,15 @@ public class Main {
                     String pacienteRelacion = lector.nextLine();
 
                     clinica.relacionarCita(citaRelacion, doctorRelacion, pacienteRelacion);
+                    clinica.guardarInfo();
                     break;
 
                 case 5:
-                    System.out.println("Exiting...");
+                    System.out.println("Saliendo..");
                     break;
 
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    System.out.println("Opcion invalida, intenta de nuevo");
                     break;
             }
         }

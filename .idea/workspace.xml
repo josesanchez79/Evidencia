@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17d1dfe0-00ce-4df3-9657-14359c3e3251" name="Changes" comment="commit con updates para la generacion y lectura de archivo de texto">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clinica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clinica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="17d1dfe0-00ce-4df3-9657-14359c3e3251" name="Changes" comment="commit con funcionalidad para checar citas" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686934813350</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="commit con funcionalidad para checar citas">
+      <created>1686962319527</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686962319527</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,7 +138,8 @@
     <MESSAGE value="&quot;primer commit con creación de repositorio&quot;" />
     <MESSAGE value="Commit con primera iteracion de codigo" />
     <MESSAGE value="commit con updates para la generacion y lectura de archivo de texto" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit con updates para la generacion y lectura de archivo de texto" />
+    <MESSAGE value="commit con funcionalidad para checar citas" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit con funcionalidad para checar citas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

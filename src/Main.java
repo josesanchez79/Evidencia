@@ -27,7 +27,7 @@ public class Main {
         // Menú de opciones para el administrador
         int opc = 0;
 
-        while (opc != 5) {
+        while (opc != 6) {
             System.out.println("Menu");
             System.out.println("1. Agregar doctor");
             System.out.println("2. Agregar paciente");

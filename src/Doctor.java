@@ -32,9 +32,4 @@ class Doctor {
     public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
     }
-    public String toCSVString() {
-        StringBuilder csvBuilder = new StringBuilder();
-        csvBuilder.append(id).append(",").append(nombre).append(",").append(especialidad);
-        return csvBuilder.toString();
-    }
 }

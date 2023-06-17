@@ -38,7 +38,7 @@ public class Main {
 
             System.out.print("Introduce tu respuesta: ");
             opc = lector.nextInt();
-            lector.nextLine(); // Consumir la nueva línea después de la entrada numérica
+            lector.nextLine();
 
             switch (opc) {
                 case 1:

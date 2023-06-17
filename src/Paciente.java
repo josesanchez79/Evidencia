@@ -22,9 +22,4 @@ public class Paciente {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public String toCSVString() {
-        StringBuilder csvBuilder = new StringBuilder();
-        csvBuilder.append(id).append(",").append(nombre);
-        return csvBuilder.toString();
-    }
 }

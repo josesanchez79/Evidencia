@@ -1,10 +1,9 @@
-import javax.print.Doc;
 import java.io.*;
 import java.util.List;
 import java.util.Map;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Scanner;
+
 
 
 public class Clinica {
@@ -155,7 +154,10 @@ public class Clinica {
                         separador = "Pacientes";
                     } else if (line.equals("Citas")) {
                         separador = "Citas";
-                    } else {
+
+                    } else if (line.equals("Administradores")){
+                        separador = "Administradores";
+                    }else {
                         switch (separador) {
                             case "Doctores":
                                 String[] infoDoctor = line.split(",");
@@ -182,6 +184,12 @@ public class Clinica {
                                     cita.setDoctor(buscarDoctor(infoCita[4]));
                                     cita.setPaciente(buscarPaciente(infoCita[5]));
                                     citas.add(cita);
+                                }
+                                break;
+                            case "Administradores":
+                                String[] infoAdmin = line.split(",");
+                                if(infoAdmin.length == 2){
+                                    administradores.put(infoAdmin[0], infoAdmin[1]);
                                 }
                                 break;
                         }
@@ -214,6 +222,13 @@ public class Clinica {
             writer.newLine();
             for (Cita cita : citas){
                 writer.write(cita.toCSVString());
+                writer.newLine();
+            }
+
+            writer.write("Administradores");
+            writer.newLine();
+            for (Map.Entry<String, String> entry : administradores.entrySet()){
+                writer.write(entry.getKey() + "," + entry.getValue());
                 writer.newLine();
             }
         } catch (IOException e){

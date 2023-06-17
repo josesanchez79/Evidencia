@@ -1,4 +1,6 @@
 public class Cita {
+
+    //inicializando atributos
     private String id;
     private String dia;
     private String hora;
@@ -6,6 +8,8 @@ public class Cita {
     private Doctor doctor;
     private Paciente paciente;
 
+
+    //constructores
     public Cita(String id, String dia, String hora, String motivo, Doctor doctor, Paciente paciente) {
         this.id = id;
         this.dia = dia;
@@ -18,6 +22,8 @@ public class Cita {
     public Cita() {
     }
 
+
+    //Getters y Setters
     public String getId() {
         return id;
     }
@@ -65,6 +71,8 @@ public class Cita {
     public void setPaciente(Paciente paciente) {
         this.paciente = paciente;
     }
+
+    //método para pasar info a formato CSV
     public String toCSVString() {
         StringBuilder csvBuilder = new StringBuilder();
         csvBuilder.append(id).append(",")

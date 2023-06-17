@@ -7,12 +7,15 @@ import java.util.HashMap;
 
 
 public class Clinica {
+
+    //inicializando atributos
     private static final String archivo = "C:\\Users\\usuario\\IdeaProjects\\Evidencia\\db\\clinica_info.txt";
     private List<Doctor> doctores;
     private List<Paciente> pacientes;
     private List<Cita> citas;
     private Map<String, String> administradores;
 
+    //constructor
     public Clinica() {
         doctores = new ArrayList<>();
         pacientes = new ArrayList<>();
@@ -20,6 +23,7 @@ public class Clinica {
         administradores = new HashMap<>();
     }
 
+    //Getters y Setters
     public List<Doctor> getDoctores() {
         return doctores;
     }
@@ -52,6 +56,8 @@ public class Clinica {
         this.administradores = administradores;
     }
 
+    //metodos para agregar
+
     public void agregarDoctor(Doctor doctor) {
         doctores.add(doctor);
         System.out.println("Doctor agregado correctamente");
@@ -62,11 +68,14 @@ public class Clinica {
         System.out.println("Paciente agregado correctamente");
     }
 
+
+    //creación de cita
     public void crearCita(Cita cita) {
         citas.add(cita);
         System.out.println("Cita creada correctamente");
     }
 
+    //relacionar cita
     public void relacionarCita(String citaId, String doctorId, String pacienteId) {
         Cita cita = buscarCita(citaId);
         Doctor doctor = buscarDoctor(doctorId);
@@ -81,16 +90,20 @@ public class Clinica {
         }
     }
 
+
+    //agregar administradores
     public void agregarAdmin(String usuario, String contraseña) {
         administradores.put(usuario, contraseña);
         System.out.println("Administrador agregado correctamente");
     }
 
+    //verificación de administradores
     public boolean verificaAdmin(String usuario, String contraseña) {
         String contraseñaG = administradores.get(usuario);
         return contraseñaG != null && contraseñaG.equals(contraseña);
     }
 
+    //métodos para buscar por ID
     public Cita buscarCita(String id) {
         for (Cita cita : citas) {
             if (cita.getId().equals(id)) {
@@ -117,6 +130,8 @@ public class Clinica {
         }
         return null;
     }
+
+    //métodos de carga y escritura al archivo
     public void cargaInfo(){
         doctores.clear();
         pacientes.clear();
@@ -235,6 +250,8 @@ public class Clinica {
             System.out.println("Error al guardar informacion al archivo");
         }
     }
+
+    //método para checar citas
     public void checarCitas() {
         if (citas.isEmpty()) {
             System.out.println("No hay citas programadas en la clínica.");

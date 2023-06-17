@@ -1,17 +1,24 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
+
+        //inicializa objeto clinica con método para cargar información de un archivo y lector
         Clinica clinica = new Clinica();
         clinica.cargaInfo();
         Scanner lector = new Scanner(System.in);
 
+        //admin hardcodeado para primer uso, se puede comentar una vez generados nuevos admins
         String admin1 = "admin";
         String contraseña1 = "contraseña";
         clinica.agregarAdmin(admin1, contraseña1);
 
+        //indicador para terminar la sesión
         boolean sesion = false;
 
+        //loop while para iterar menú
         while (!sesion) {
+
+            //Se pide usuario y contraseña, el método verifica que sean correctos
             System.out.print("Usuario: ");
             String usuario = lector.nextLine();
             System.out.print("Contraseña: ");
@@ -24,7 +31,7 @@ public class Main {
             }
         }
 
-        // Menú de opciones para el administrador
+        // Menú de opciones para el administrador a partir de un while loop y un switch
         int opc = 0;
 
         while (opc != 6) {
@@ -40,7 +47,10 @@ public class Main {
             opc = lector.nextInt();
             lector.nextLine();
 
+            //Menú
             switch (opc) {
+
+                //Agregar doctor
                 case 1:
                     System.out.print("ID Doctor: ");
                     String doctorId = lector.nextLine();
@@ -55,6 +65,8 @@ public class Main {
                     break;
 
                 case 2:
+
+                    //Agregar paciente
                     System.out.print("ID Paciente: ");
                     String pacienteId = lector.nextLine();
                     System.out.print("Nombre paciente: ");
@@ -66,6 +78,8 @@ public class Main {
                     break;
 
                 case 3:
+
+                    //Crear cita
                     System.out.print("ID Cita: ");
                     String citaId = lector.nextLine();
                     System.out.print("Dia: ");
@@ -102,6 +116,8 @@ public class Main {
                     break;
 
                 case 4:
+
+                    //Relacionar cita por método
                     System.out.print("ID Cita: ");
                     String citaRelacion = lector.nextLine();
                     System.out.print("ID Doctor: ");
@@ -114,14 +130,20 @@ public class Main {
                     break;
 
                 case 5:
+
+                    //Checar citas
                     clinica.checarCitas();
                     break;
 
                 case 6:
+
+                    //salida
                     System.out.println("Saliendo..");
                     break;
 
                 default:
+
+                    //default en caso de meter opc invalida
                     System.out.println("Opcion invalida, intenta de nuevo");
                     break;
             }

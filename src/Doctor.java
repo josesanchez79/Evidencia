@@ -1,14 +1,18 @@
 class Doctor {
+
+    //inicializando atributos
     private String id;
     private String nombre;
     private String especialidad;
 
+    //constructor
     public Doctor(String id, String nombre, String especialidad) {
         this.id = id;
         this.nombre = nombre;
         this.especialidad = especialidad;
     }
 
+    //Getters y Setters
     public String getId() {
         return id;
     }

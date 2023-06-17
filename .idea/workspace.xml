@@ -9,11 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17d1dfe0-00ce-4df3-9657-14359c3e3251" name="Changes" comment="Cambios finales, README.MD modificado">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Clinica.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+    <list default="true" id="17d1dfe0-00ce-4df3-9657-14359c3e3251" name="Changes" comment="Cambios finales, README.MD modificado, correcciones">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clinica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clinica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paciente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686971617040</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Cambios finales, README.MD modificado, correcciones">
+      <created>1686973748574</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1686973748574</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -175,6 +184,7 @@
     <MESSAGE value="commit con updates para la generacion y lectura de archivo de texto" />
     <MESSAGE value="commit con funcionalidad para checar citas" />
     <MESSAGE value="Cambios finales, README.MD modificado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios finales, README.MD modificado" />
+    <MESSAGE value="Cambios finales, README.MD modificado, correcciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios finales, README.MD modificado, correcciones" />
   </component>
 </project>

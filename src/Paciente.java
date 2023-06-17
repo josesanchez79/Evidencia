@@ -1,12 +1,18 @@
 public class Paciente {
+
+    //inicialiando atributos
     private String id;
     private String nombre;
 
+
+    //constructor
     public Paciente(String id, String nombre) {
         this.id = id;
         this.nombre = nombre;
     }
 
+
+    //Getters y Setters
     public String getId() {
         return id;
     }

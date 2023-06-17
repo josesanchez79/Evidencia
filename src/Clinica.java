@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 
 public class Clinica {
-    private static final String archivo = "clinica_info.txt";
+    private static final String archivo = "C:\\Users\\usuario\\IdeaProjects\\Evidencia\\db\\clinica_info.txt";
     private List<Doctor> doctores;
     private List<Paciente> pacientes;
     private List<Cita> citas;
@@ -123,7 +123,7 @@ public class Clinica {
         pacientes.clear();
         citas.clear();
 
-        File archivo = new File("C:\\Users\\usuario\\IdeaProjects\\Evidencia\\src\\db\\clinica_info.txt");
+        File archivo = new File("C:\\Users\\usuario\\IdeaProjects\\Evidencia\\db\\clinica_info.txt");
 
         if (!archivo.exists()) {
             System.out.println("No se ha encontrado el archivo. Creando nuevos archivos.");
@@ -143,35 +143,36 @@ public class Clinica {
             }
         }
 
-        try (Scanner lector = new Scanner(new FileReader(archivo))){
+        try (BufferedReader reader = new BufferedReader(new FileReader(archivo))){
             String separador = "";
-            while (lector.hasNextLine()){
-                String linea = lector.nextLine().trim();
-                if (!linea.isEmpty()){
-                    if(linea.equals("Doctores")){
+            String line;
+            while ((line = reader.readLine()) != null){
+                line = line.trim();
+                if (!line.isEmpty()){
+                    if(line.equals("Doctores")){
                         separador = "Doctores";
-                    } else if (linea.equals("Pacientes")) {
+                    } else if (line.equals("Pacientes")) {
                         separador = "Pacientes";
-                    } else if (linea.equals("Citas")) {
+                    } else if (line.equals("Citas")) {
                         separador = "Citas";
                     } else {
                         switch (separador) {
                             case "Doctores":
-                                String[] infoDoctor = linea.split(",");
+                                String[] infoDoctor = line.split(",");
                                 if (infoDoctor.length == 3){
                                     Doctor doctor = new Doctor(infoDoctor[0], infoDoctor[1], infoDoctor[2]);
                                     doctores.add(doctor);
                                 }
                                 break;
                             case "Pacientes":
-                                String[] infoPaciente = linea.split(",");
+                                String[] infoPaciente = line.split(",");
                                 if (infoPaciente.length == 2){
                                     Paciente paciente = new Paciente(infoPaciente[0], infoPaciente[1]);
                                     pacientes.add(paciente);
                                 }
                                 break;
                             case "Citas":
-                                String[] infoCita = linea.split(",");
+                                String[] infoCita = line.split(",");
                                 if (infoCita.length == 6){
                                     Cita cita = new Cita();
                                     cita.setId(infoCita[0]);
@@ -187,7 +188,7 @@ public class Clinica {
                     }
                 }
 
-            }   }catch (FileNotFoundException e) {
+            }   }catch (IOException e) {
             System.out.println("No se ha encontrado el archivo");
 
         }
@@ -196,21 +197,43 @@ public class Clinica {
     public void guardarInfo(){
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(archivo))){
             writer.write("Doctores");
+            writer.newLine();
             for (Doctor doctor : doctores){
                 writer.write(doctor.getId() + "," + doctor.getNombre() + "," + doctor.getEspecialidad());
+                writer.newLine();
             }
 
             writer.write("Pacientes");
+            writer.newLine();
             for (Paciente paciente : pacientes){
                 writer.write(paciente.getId() + "," + paciente.getNombre());
+                writer.newLine();
             }
 
             writer.write("Citas");
+            writer.newLine();
             for (Cita cita : citas){
                 writer.write(cita.toCSVString());
+                writer.newLine();
             }
         } catch (IOException e){
             System.out.println("Error al guardar informacion al archivo");
+        }
+    }
+    public void checarCitas() {
+        if (citas.isEmpty()) {
+            System.out.println("No hay citas programadas en la clínica.");
+        } else {
+            System.out.println("Citas programadas:");
+            for (Cita cita : citas) {
+                System.out.println("ID de cita: " + cita.getId());
+                System.out.println("Doctor: " + cita.getDoctor().getNombre());
+                System.out.println("Paciente: " + cita.getPaciente().getNombre());
+                System.out.println("Día: " + cita.getDia());
+                System.out.println("Hora: " + cita.getHora());
+                System.out.println("Motivo: " + cita.getMotivo());
+                System.out.println("-----------------------------------");
+            }
         }
     }
 }

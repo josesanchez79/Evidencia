@@ -33,7 +33,8 @@ public class Main {
             System.out.println("2. Agregar paciente");
             System.out.println("3. Crear cita");
             System.out.println("4. Relacionar cita");
-            System.out.println("5. Salir");
+            System.out.println("5. Revisar citas");
+            System.out.println("6. Salir");
 
             System.out.print("Introduce tu respuesta: ");
             opc = lector.nextInt();
@@ -113,6 +114,10 @@ public class Main {
                     break;
 
                 case 5:
+                    clinica.checarCitas();
+                    break;
+
+                case 6:
                     System.out.println("Saliendo..");
                     break;
 

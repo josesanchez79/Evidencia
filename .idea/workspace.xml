@@ -1,19 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Clinica" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17d1dfe0-00ce-4df3-9657-14359c3e3251" name="Changes" comment="&quot;primer commit con creación de repositorio&quot;">
+    <list default="true" id="17d1dfe0-00ce-4df3-9657-14359c3e3251" name="Changes" comment="Cambios finales, README.MD modificado, correcciones">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Clinica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clinica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paciente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="ca7e9254-4e14-44b6-b51b-87af62a512c8" />
+        <option name="url" value="https://github.com/josesanchez79/Evidencia" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -27,9 +58,28 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/usuario/IdeaProjects/Evidencia/src",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2091954"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Evidencia" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -53,11 +103,88 @@
       <option name="project" value="LOCAL" />
       <updated>1686021398490</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&quot;primer commit con creación de repositorio&quot;">
+      <created>1686028100840</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686028100840</updated>
+    </task>
+    <task id="LOCAL-00004" summary="&quot;primer commit con creación de repositorio&quot;">
+      <created>1686028131818</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686028131818</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Commit con primera iteracion de codigo">
+      <created>1686771007077</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686771007077</updated>
+    </task>
+    <task id="LOCAL-00006" summary="commit con updates para la generacion y lectura de archivo de texto">
+      <created>1686934813350</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686934813350</updated>
+    </task>
+    <task id="LOCAL-00007" summary="commit con funcionalidad para checar citas">
+      <created>1686962319527</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686962319527</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Cambios finales, README.MD modificado">
+      <created>1686971617040</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1686971617040</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Cambios finales, README.MD modificado, correcciones">
+      <created>1686973748574</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1686973748574</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="develop" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;primer commit con creación de repositorio&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;primer commit con creación de repositorio&quot;" />
+    <MESSAGE value="Commit con primera iteracion de codigo" />
+    <MESSAGE value="commit con updates para la generacion y lectura de archivo de texto" />
+    <MESSAGE value="commit con funcionalidad para checar citas" />
+    <MESSAGE value="Cambios finales, README.MD modificado" />
+    <MESSAGE value="Cambios finales, README.MD modificado, correcciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios finales, README.MD modificado, correcciones" />
   </component>
 </project>
